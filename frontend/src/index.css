@@ -1,0 +1,262 @@
+/* Global Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- AUTH PAGES ---------- */
+
+.auth-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4b0082;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-container button {
+  padding: 12px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-container a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- TODO APP ---------- */
+
+.todo-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.todo-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.todo-box h2 {
+  text-align: center;
+  color: #222;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* --- Input and Add Button --- */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.todo-form input:focus {
+  outline: none;
+  border-color: #00c6ff;
+  box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.2);
+}
+
+.todo-form input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.todo-form button {
+  padding: 14px 20px;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 176, 155, 0.3);
+}
+
+.todo-form button:hover {
+  background: linear-gradient(to right, #96c93d, #00b09b);
+  transform: scale(1.03);
+}
+
+/* --- Task List --- */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.todo-item:hover {
+  background: #e8f0fe;
+}
+
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* --- Buttons + Checkbox --- */
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.todo-actions input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.todo-actions button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo-actions button:hover {
+  transform: scale(1.2);
+}
+
+/* --- Edit Mode --- */
+.edit-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.save-btn {
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+/* --- Logout --- */
+.logout-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #ff4b2b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff416c;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
