@@ -36,30 +36,33 @@ export default function TodoApp() {
   };
 
   return (
-    <div className="todo-wrapper">
-      <div className="todo-box">
-        <h2>🌟 Your To-Do List</h2>
-        <TodoForm addTodo={addTodo} />
-        <div className="todo-list">
-          {todos.map(todo => (
-            <TodoItem
-              key={todo._id}
-              todo={todo}
-              updateTodo={updateTodo}
-              deleteTodo={deleteTodo}
-            />
-          ))}
+    <>
+      <div className="todo-wrapper">
+        <div className="todo-box">
+          <h2>🌟 Your To-Do List</h2>
+          <TodoForm addTodo={addTodo} />
+          <div className="todo-list">
+            {todos.map(todo => (
+              <TodoItem
+                key={todo._id}
+                todo={todo}
+                updateTodo={updateTodo}
+                deleteTodo={deleteTodo}
+              />
+            ))}
+          </div>
+          <button
+            className="logout-btn"
+            onClick={() => {
+              localStorage.removeItem('token');
+              navigate('/login');
+            }}
+          >
+            🔒 Logout
+          </button>
         </div>
-        <button
-          className="logout-btn"
-          onClick={() => {
-            localStorage.removeItem('token');
-            navigate('/login');
-          }}
-        >
-          🔒 Logout
-        </button>
+        <p className="copyright">© 2025 Created by Ahad Mulani</p>
       </div>
-    </div>
+    </>
   );
 }

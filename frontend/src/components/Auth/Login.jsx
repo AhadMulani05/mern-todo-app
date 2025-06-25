@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import API from '../../api';
+import Footer from '../../components/Footer'; // ✅ import Footer
 
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -18,24 +19,29 @@ export default function Login() {
   };
 
   return (
-    <div className="auth-container">
-      <h2>Welcome Back</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          onChange={e => setForm({ ...form, email: e.target.value })}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={e => setForm({ ...form, password: e.target.value })}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>Don’t have an account? <Link to="/">Sign up here</Link></p>
-    </div>
+    <>
+      <div className="auth-container">
+        <h2>Welcome Back</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            onChange={e => setForm({ ...form, email: e.target.value })}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={e => setForm({ ...form, password: e.target.value })}
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>Don’t have an account? <Link to="/">Sign up here</Link></p>
+      </div>
+
+      {/* ✅ Footer below the login box */}
+      <Footer />
+    </>
   );
 }

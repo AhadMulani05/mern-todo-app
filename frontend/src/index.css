@@ -83,10 +83,12 @@ body {
   height: 100vh;
   background: linear-gradient(to right, #a8edea, #fed6e3);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;      /* ✅ Add this */
+  justify-content: center;     /* Optional: aligns vertically */
+  align-items: center;         /* ✅ Centers items horizontally */
   padding: 20px;
 }
+
 
 .todo-box {
   background: #ffffff;
@@ -259,4 +261,22 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  padding: 10px 0;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 30px;
 }
