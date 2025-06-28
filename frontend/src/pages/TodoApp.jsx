@@ -62,6 +62,8 @@ export default function TodoApp() {
           </button>
         </div>
         <p className="copyright">© 2025 Created by Ahad Mulani</p>
+
+        
       </div>
     </>
   );
